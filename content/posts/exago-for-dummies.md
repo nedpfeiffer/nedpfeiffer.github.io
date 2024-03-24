@@ -65,10 +65,10 @@ spack install exago@develop%gcc \
   ^petsc+mpi~hypre~superlu-dist~mumps+shared
 ```
 
-Symlink libcoinhsl.so to the expected name libhsl.so Keep in mind the directory named coinhsl-2022.11.09-abcdef... will be different for each build.
+Symlink libcoinhsl.so to the expected name libhsl.so. Keep in mind the directory named coinhsl-2022.11.09-... will be different for each build.
 
 ```
-sudo ln -s spack spack/opt/spack/linux-ubuntu22.04-skylake/gcc-11.4.0/coinhsl-2022.11.09-xxyczgkj5d5bmp65n3blb2ddrcuj7j76/lib/libcoinhsl.so spack/opt/spack/linux-ubuntu22.04-skylake/gcc-11.4.0/coinhsl-2022.11.09-xxyczgkj5d5bmp65n3blb2ddrcuj7j76/lib/libhsl.so 
+sudo ln -s spack/opt/spack/linux-ubuntu22.04-skylake/gcc-11.4.0/coinhsl-2022.11.09-xxyczgkj5d5bmp65n3blb2ddrcuj7j76/lib/libcoinhsl.so spack/opt/spack/linux-ubuntu22.04-skylake/gcc-11.4.0/coinhsl-2022.11.09-xxyczgkj5d5bmp65n3blb2ddrcuj7j76/lib/libhsl.so 
 ```
 
 Run opflow from the ExaGO directory.
