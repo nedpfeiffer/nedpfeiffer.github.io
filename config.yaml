@@ -1,0 +1,31 @@
+baseURL: https://ned.vc/
+languageCode: en
+title: ned.vc
+
+theme: ["PaperMod"]
+
+languages:
+    en:
+        languageName: English
+        weight: 1
+        menu:
+          main:
+            - identifier: Archives
+              name: Archives
+              url: /archives/
+              weight: 10
+        homeInfoParams:
+          Title: "Hi, I'm Ned"
+          Content: "I am an undergraduate with an interdisciplinary educational background including geopolitics, cybersecurity, and psychology. I seek an entry-level analyst position where I can employ my diverse skill set including data and behavioral analytics as well as knowledge of the global security environment."
+        socialIcons:
+          - name: email
+            url: "mailto:nedpfeiffer@proton.me"
+          - name: linkedin
+            url: "https://www.linkedin.com/in/nedpfeiffer/"
+          - name: github
+            url: "https://github.com/nedpfeiffer/"
+
+params:
+  defaultTheme: dark
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
