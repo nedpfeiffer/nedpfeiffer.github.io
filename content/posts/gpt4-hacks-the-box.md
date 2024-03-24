@@ -6,7 +6,7 @@ draft: false
 
 This past weekend I participated in the 2023 HackTheBox University challenge, which was a very humbling experience. Our team ultimately ended up finding only 2 of 22 total flags, struggling on the easiest challenges. Nevertheless, it was a fun learning experience and it's got me feeling motivated to continue learning.
 
-I took a crack at the first reverse engineering problem, realized I'm a script kiddie, then settled on cryptography. After netcating into the server, I was greeted with the following:
+I took a crack at the first reverse engineering problem, remembered I'm a script kiddie, then settled on cryptography. After netcating into the server, I was greeted with the following:
 
 ```
 #     #  #####   #####               #       ###   
