@@ -6,7 +6,7 @@ draft: false
 
 ExaGO is an high-performance power grid optimization program for stochastic, security-constrained, and multi-period AC optimal power flow problems. It was designed to be run on supercomputers to simulate thousands of different scenarios on the power grid, such as cyberattacks and natural disasters. 
 
-This guide will show you how to run ExaGO on consumer hardware so you can simulate and visualize the powergrid for yourself, no supercomputer required! It can be easily installed in a virtual machine if desired. The following instructions assume you are using Ubuntu 22.04.
+This guide will show you how to run ExaGO on consumer hardware so you can simulate and visualize the powergrid for yourself, no supercomputer required! It can be easily installed in a virtual machine or Windows Subsystem for Linux. The following instructions assume you are using Ubuntu 22.04.
 
 First, we'll install some pre-requisites.
 
@@ -14,7 +14,7 @@ First, we'll install some pre-requisites.
 sudo apt update && sudo apt install git vim build-essential gfortran
 ```
 
-Now request an HSL License from https://licences.stfc.ac.uk/product/coin-hsl. Licenses are free for university students with a .edu email, and they take a couple days to grant access.
+Now request an HSL License from https://licences.stfc.ac.uk/product/coin-hsl. Licenses are free for university students with a .edu email, but they take a couple days to grant access.
 
 ```
 # Download CoinHSL, move it to the home directory, and rename the file
@@ -30,20 +30,16 @@ export PATH=$PWD/spack/bin:$PATH
 source spack/share/spack/setup-env.sh
 ```
 
-Get the sha256 sum of the downloaded CoinHSL archive and add it to the Spack config.
-> WARNING!
-> Manually adding the checksum has security implications; make sure CoinHSL is downloaded from a trusted source. This will ideally be fixed in the near future.
+Edit CoinHSL's Spack config. You will have to use vim; beginners may want to look up a quick vim tutorial.
 
 ```
-sha256sum coinhsl-archive-2022.11.09.tar.gz
 spack edit coinhsl
 ```
 
-You will have to edit the config with vim; beginners may want to look up a quick vim tutorial.
-Add the following to the config:
+Add the following version and checksum. You can verify the checksum at https://licences.stfc.ac.uk/product/coin-hsl if desired.
 
 ```
-version("2022.11.09", sha256="<insert sha256sum here>")
+version("2022.11.09", sha256="d6d9089bb9cf3eb0e4af195f1a2f10cd61da42eddf8da73a12b8c62902bceee3")
 ```
 
 Remove the following from the config:
@@ -68,15 +64,16 @@ spack install exago@develop%gcc \
 Symlink libcoinhsl.so to the expected name libhsl.so. Keep in mind the directory named coinhsl-2022.11.09-... will be different for each build.
 
 ```
-sudo ln -s spack/opt/spack/linux-ubuntu22.04-skylake/gcc-11.4.0/coinhsl-2022.11.09-xxyczgkj5d5bmp65n3blb2ddrcuj7j76/lib/libcoinhsl.so spack/opt/spack/linux-ubuntu22.04-skylake/gcc-11.4.0/coinhsl-2022.11.09-xxyczgkj5d5bmp65n3blb2ddrcuj7j76/lib/libhsl.so 
+cd spack/opt/spack/linux-ubuntu22.04-skylake/gcc-11.4.0/coinhsl-2022.11.09-<INSERT_YOUR_PATH_HERE>/lib
+sudo ln -s libcoinhsl.so libhsl.so 
 ```
 
 Run opflow from the ExaGO directory.
 
 ```
 spack load exago
-cd ExaGO
+cd ~/ExaGO
 opflow datafiles/case_ACTIVSg2000.m
 ```
 
-Congrats! Now we can run different scenarios on synthetic power grid data and stress test the fictional grid. It may be possible to replicate smaller portions of the grid using open-source intelligence, but I'll save that for another blog post.
+Congrats! Now we can run different scenarios on synthetic power grid data and stress test the fictional grid. In the next blog post, we'll explore visualizing the results of these simulations.
