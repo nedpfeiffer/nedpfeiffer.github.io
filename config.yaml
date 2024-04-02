@@ -26,6 +26,5 @@ languages:
             url: "https://github.com/nedpfeiffer/"
 
 params:
-  defaultTheme: dark
   ShowBreadCrumbs: true
   ShowPostNavLinks: true
