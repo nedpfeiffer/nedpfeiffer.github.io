@@ -33,7 +33,8 @@ pip install https://github.com/Xeyler/joinlater/releases/download/v0.2.1/joinlat
 joinlater
 ```
 
-Follow the instructions printed to the terminal. After your certs are generated, <s>you'll need to edit your eduroam connection settings</s> should be set as long as you're using NetworkManager. Hooray!
+Follow the instructions printed to the terminal. After your certs are generated, you should be set as long as you're using NetworkManager. Hooray!
+
 ## Arch-based distros
 
 If you're using Arch, you probably don't need your hand held.
