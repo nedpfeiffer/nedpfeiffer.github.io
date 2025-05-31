@@ -4,11 +4,9 @@ date: 2024-05-05
 draft: false
 ---
 
-*TLDR; View the pretty graph [here](https://exago.ned.vc). View a brief summary of our research [here](/tx-gas-report.pdf).*
-
 # Introduction
 
-The past semester I conducted research with Utah State University's Center for Anticipatory Intelligence, examining the resilience of the Texas natural gas industry. Alongside interviews with five subject matter experts from Baker Tilly, ZGlobal, Vistra Corp, and Pacific Northwest National Lab, we utilized [ExaGO](https://github.com/pnnl/ExaGO) to simulate the impact of cyberattacks on Texas critical infrastructure. This blog post will focus on the technical side of our simulations, rather than our overall analysis and findings. If you're interested in that analysis, feel free to check out [this brief summary](/tx-gas-report.pdf).
+The past semester I conducted research with Utah State University's Center for Anticipatory Intelligence, examining the resilience of the Texas natural gas industry. Alongside interviews with five subject matter experts from Baker Tilly, ZGlobal, Vistra Corp, and Pacific Northwest National Lab, we utilized [ExaGO](https://github.com/pnnl/ExaGO) to simulate the impact of cyberattacks on Texas critical infrastructure. This blog post will focus on the technical side of our simulations, rather than our overall analysis and findings.
 
 To get started, we'll need to install some software:
 
@@ -91,6 +89,6 @@ python3 geninputfile.py opflowout.json
 npm start
 ```
 
-Hooray! Your visualization should be available at http://localhost:8080. If you want to see my example, take a look at https://exago.ned.vc (please be patient as it loads, ExaGO was never really meant to be exposed to the public internet so I've got a really janky reverse proxy serving the files). Make sure to check the boxes for `Voltage` and `Generation Power` to see the pretty colors.
+Hooray! Your visualization should be available at http://localhost:8080.
 
 I encourage you to mess around and have fun with the MATLAB files and ExaGO, turning off different power plants and testing out different grids. There are a number of other datasets available from Texas A&M researchers, available [here](https://electricgrids.engr.tamu.edu/electric-grid-test-cases/). Although this project has made me sleep a little bit more uneasy at night knowing how vulnerable our critical infrastructure is, it's been very fun to geek out and learn about the confluence of national security, operational technology, and my home state. Thanks for reading!
