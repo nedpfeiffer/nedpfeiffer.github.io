@@ -16,7 +16,7 @@ languages:
               weight: 10
         homeInfoParams:
           Title: "Hi, I'm Ned"
-          Content: "I am an undergraduate with an interdisciplinary educational background including geopolitics, cybersecurity, and psychology. I seek an entry-level analyst position where I can employ my diverse skill set including data and behavioral analytics as well as knowledge of the global security environment."
+          Content: "I’m an application security consultant with a background in cybersecurity, psychology, and geopolitics. I specialize in identifying vulnerabilities in web applications, and outside of work I research mobile app vulnerabilities and enjoy diving deep into how people, systems, and threats interact in a complex global environment."
         socialIcons:
           - name: email
             url: "mailto:nedpfeiffer@proton.me"
