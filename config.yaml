@@ -16,7 +16,7 @@ languages:
               weight: 10
         homeInfoParams:
           Title: "Hi, I'm Ned"
-          Content: "I’m an application security consultant with a background in cybersecurity, psychology, and geopolitics. I specialize in identifying vulnerabilities in web applications, and outside of work I research mobile app vulnerabilities and enjoy diving deep into how people, systems, and threats interact in a complex global environment."
+          Content: "I’m an application security consultant with a background in cybersecurity, psychology, and geopolitics. I am fascinated by how people, systems, and threats interact in a complex global environment."
         socialIcons:
           - name: email
             url: "mailto:nedpfeiffer@proton.me"
