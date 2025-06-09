@@ -18,8 +18,6 @@ languages:
           Title: "Hi, I'm Ned"
           Content: "I’m an application security consultant with a background in cybersecurity, psychology, and geopolitics. I am fascinated by how people, systems, and threats interact in a complex global environment."
         socialIcons:
-          - name: email
-            url: "mailto:nedpfeiffer@proton.me"
           - name: linkedin
             url: "https://www.linkedin.com/in/nedpfeiffer/"
           - name: github
