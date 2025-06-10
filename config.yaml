@@ -16,7 +16,7 @@ languages:
               weight: 10
         homeInfoParams:
           Title: "Hi, I'm Ned"
-          Content: "I’m an application security consultant with a background in cybersecurity, psychology, and geopolitics. I am fascinated by how people, systems, and threats interact in a complex global environment."
+          Content: "I'm an application security consultant with a background in cybersecurity, psychology, and geopolitics, driven by a fascination with the interplay between people, systems, and threat actors in a complex global environment."
         socialIcons:
           - name: linkedin
             url: "https://www.linkedin.com/in/nedpfeiffer/"
